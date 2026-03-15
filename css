@@ -1,103 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
 
-    background: linear-gradient(135deg,#667eea,#764ba2);
+font-family: Arial;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+background: linear-gradient(135deg,#667eea,#764ba2);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+margin:0;
+
 }
 
 .container {
 
-    background: white;
-    padding: 30px;
-    width: 400px;
+background:white;
 
-    border-radius: 12px;
+padding:30px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+border-radius:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+width:400px;
+
 }
 
 h1 {
-    text-align: center;
+
+text-align:center;
+
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+form {
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
 }
 
 input, select, button {
 
-    padding: 10px;
+padding:10px;
 
-    border-radius: 8px;
+border-radius:8px;
 
-    border: 1px solid #ccc;
+border:1px solid #ccc;
+
 }
 
 button {
 
-    background: #667eea;
+background:#667eea;
 
-    color: white;
+color:white;
 
-    border: none;
+border:none;
 
-    cursor: pointer;
+cursor:pointer;
 
-    transition: 0.3s;
+transition:0.3s;
+
 }
 
 button:hover {
 
-    background: #5563d6;
+background:#5563d6;
+
 }
 
-.event-list {
+ul {
 
-    list-style: none;
+list-style:none;
 
-    padding: 0;
+padding:0;
 
-    margin-top: 20px;
+margin-top:20px;
+
 }
 
-.event-list li {
+li {
 
-    display: flex;
+display:flex;
 
-    justify-content: space-between;
+justify-content:space-between;
 
-    align-items: center;
+background:#f4f4f4;
 
-    padding: 10px;
+padding:10px;
 
-    margin-bottom: 10px;
+border-radius:8px;
 
-    background: #f4f4f4;
+margin-bottom:10px;
 
-    border-radius: 8px;
+transition:0.3s;
 
-    transition: 0.3s;
 }
 
-.event-list li:hover {
+li:hover {
 
-    transform: scale(1.02);
+background:#e8e8e8;
 
-    background: #eaeaea;
 }
 
-.delete {
+a {
 
-    color: red;
+color:red;
 
-    text-decoration: none;
+text-decoration:none;
 
-    font-size: 18px;
 }

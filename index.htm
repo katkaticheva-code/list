@@ -3,48 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Планувальник подій</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
 <body>
 
 <div class="container">
 
-<h1>📅 Планувальник подій</h1>
+<h1>Планувальник подій</h1>
 
-<form method="POST" class="form">
+<form method="POST">
 
 <input type="text" name="name" placeholder="Назва події" required>
 
-<input type="date" name="date" required>
+<input type="date" name="date">
 
-<input type="time" name="time" required>
+<input type="time" name="time">
 
 <select name="priority">
-<option value="Низький">Низький</option>
-<option value="Середній">Середній</option>
-<option value="Високий">Високий</option>
+
+<option>Низький</option>
+<option>Середній</option>
+<option>Високий</option>
+
 </select>
 
 <button type="submit">Додати</button>
 
 </form>
 
-<h2>Список подій</h2>
+<ul>
 
-<ul class="event-list">
-
+{% for event in events %}
 
 <li>
-<div>
-<strong></strong><br>
 
-</div>
+<strong>{{ event.name }}</strong>
+{{ event.date }}
+{{ event.time }}
+{{ event.priority }}
 
-<a class="delete" href="/delete/{{ loop.index0 }}"></a>
+<a href="/delete/{{ loop.index0 }}">❌</a>
 
 </li>
 
+{% endfor %}
 
 </ul>
 
